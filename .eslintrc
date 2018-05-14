@@ -7,6 +7,111 @@
     "es6": true
   },
   "rules": {
-    // TODO place rules here
+  
+	//1) enforce one true brace style
+    "brace-style": ["error","1tbs"],
+	
+	//2) require camel case names
+    "camelcase": ["error",{"properties": "always"}],
+	
+	//3) enforce spacing after comma
+    "comma-spacing": ["error",{"after": true}],
+	
+	//4) require a comma after and on the same line as an array element, object property, or variable declaration
+    "comma-style": ["error", "last"],
+	
+	//5) disallow padding inside computed properties
+    "computed-property-spacing": ["error","never"],
+	
+	//6) enforce newline at the end of file, with no multiple empty lines
+    "eol-last": ["error","always"],
+	
+	//7) enforce spacing between functions and their invocations
+    "func-call-spacing": ["error","always"],
+	
+	//8) (warn) require function expressions to have a name
+    "func-names": ["warn","always"],
+	
+	//9) enforce the location of arrow function bodies with implicit returns
+    "implicit-arrow-linebreak": ["error", "below"],
+    
+	//10) use 4 spaces for indent
+	"indent": ["error",4],
+	
+	//11) require a space before & after keywords
+    "keyword-spacing": ["error",{"before": true,"after": true}],
+	
+	//12) maximum line length = 80, ignore for strings
+    "max-len": ["error",{"code": 80}],
+	
+	//13) disallow the omission of parentheses when invoking a constructor with no arguments
+	"new-parens": 2,
+	
+	//14) disallow mixed spaces and tabs for indentation
+	"no-mixed-spaces-and-tabs": "error",
+	
+	//15) disallow use of chained assignment expressions
+	"no-multi-assign": "error",
+	
+	//16) disallow multiple empty lines and allow only one newline at the end
+    "no-multiple-empty-lines": ["error",{"max": 1,"maxEOF": 1}],
+	
+	//17) disallow use of the Object constructor
+	"no-new-object": 2,
+	
+	//18) disallow use of unary operators, ++ and --
+	"no-plusplus": 2,
+	
+	//19) disallow for..in syntax and show custom error
+    "no-restricted-syntax": ["error",{"selector": "ForInStatement",
+	"message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object. {keys,values,entries}, and iterate over the resulting array."}],
+	
+	//20) disallow space between function identifier and application
+    "no-spaced-func": 2,
+	
+	//21) disallow tab characters entirely
+	"no-tabs": "error",
+	
+	//22) disallow dangling underscores in identifiers everywhere
+	"no-underscore-dangle": "error",
+	
+	//23) disallow a newline before a single-line statement
+	"nonblock-statement-body-position": ["error", "beside"],
+	
+	//24) require operator at the beginning of the line in multiline statements
+    "operator-linebreak": ["error", "before"],
+	
+	//25) disallow padding within blocks
+    "padded-blocks": ["error", "never"],
+	
+	//26) use only single quotes
+    "quotes": ["error","single"],
+	
+	//27) require semicolons at the end of statements
+    "semi": ["error","always"],
+	
+	//28) enforce spacing after semicolons
+    "semi-spacing": ["error",{"after": true}],
+	
+	//29) enforce that semicolons are at the end of statements
+    "semi-style": ["error","last"],
+	
+	//30) require space before blocks
+    "space-before-blocks": "error",
+		
+	//31) require space before opening parenthesis in anonymous and arrow functions. Exception: named functions.
+	"space-before-function-paren": ["error",{"anonymous": "always","named": "ignore","asyncArrow": "always"}],
+    
+	//32) disallow spaces inside parentheses
+	"space-in-parens": ["error","never"],
+	
+	//33) require spaces around operators
+	"space-infix-ops": "error",
+	
+	//34) Require spaces before/after 'words' unary operators (new, delete, typeof, void, yield), disallow space before/after 'nonwords' operators (-, +, --, ++, !, !!).
+    "space-unary-ops": [2,{"words": true,"nonwords": false}],
+	
+	//35) require a space immediately following the // or /* in a comment
+    "spaced-comment": ["error","always"]
   }
 }
